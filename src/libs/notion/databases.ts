@@ -3,7 +3,7 @@ import { notion } from './client';
 /**
  * Databaseの情報のみを取得
  */
-export const getDatabaseInfo = async (databaseId: string) => {
+export const getDatabase = async (databaseId: string) => {
   const response = await notion.databases.retrieve({ database_id: databaseId });
 
   return response;
@@ -12,7 +12,7 @@ export const getDatabaseInfo = async (databaseId: string) => {
 /**
  * Databaseの中身を取得
  */
-export const getDatabase = async (databaseId: string) => {
+export const getDatabaseContents = async (databaseId: string) => {
   const response = await notion.databases.query({
     database_id: databaseId,
 
