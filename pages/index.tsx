@@ -1,7 +1,7 @@
 import { Button } from '@mantine/core';
 import { Prism } from '@mantine/prism';
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 export default function Home() {
   const [response, setResponse] = useState([]);
