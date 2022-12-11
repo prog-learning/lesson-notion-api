@@ -2,6 +2,7 @@ import { notion } from './client';
 
 /**
  * Blockの取得
+ * @param blockId BlockのID
  */
 export const getBlock = async (blockId: string) => {
   const response = await notion.blocks.retrieve({
@@ -13,6 +14,7 @@ export const getBlock = async (blockId: string) => {
 
 /**
  * Blockの編集
+ * @param blockId BlockのID
  */
 export const updateBlock = async (blockId: string) => {
   const response = await notion.blocks.update({
@@ -48,6 +50,7 @@ export const getNestedBlocks = async (blockId: string) => {
 
 /**
  * childrenにBlockを追加
+ * @param blockId BlockのID
  */
 export const appendBlocks = async (blockId: string) => {
   const response = await notion.blocks.children.append({
@@ -88,6 +91,7 @@ export const appendBlocks = async (blockId: string) => {
 
 /**
  * Blockを削除
+ * @param blockId BlockのID
  */
 export const deleteBlock = async (blockId: string) => {
   const response = await notion.blocks.delete({

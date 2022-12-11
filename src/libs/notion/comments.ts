@@ -2,6 +2,7 @@ import { notion } from './client';
 
 /**
  * BlockのCommentsを取得
+ * @param blockId BlockのID
  * リアクションの絵文字は取得できない
  */
 export const getComments = async (blockId: string) => {
@@ -12,6 +13,7 @@ export const getComments = async (blockId: string) => {
 
 /**
  * BlockにCommentsを追加
+ * @param pageId PageまたはBlockのID
  */
 export const createComment = async (pageId: string) => {
   const discussionId = '567bc771-d63c-4ba3-8539-d69d76a198e6';

@@ -2,6 +2,7 @@ import { notion } from './client';
 
 /**
  * Databaseの情報のみを取得
+ * @param databaseId DatabaseのID
  */
 export const getDatabase = async (databaseId: string) => {
   const response = await notion.databases.retrieve({ database_id: databaseId });
@@ -11,6 +12,7 @@ export const getDatabase = async (databaseId: string) => {
 
 /**
  * Databaseの中身を取得
+ * @param databaseId DatabaseのID
  */
 export const getDatabaseContents = async (databaseId: string) => {
   const response = await notion.databases.query({

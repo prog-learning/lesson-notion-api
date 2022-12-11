@@ -4,6 +4,7 @@ const parentDatabaseId = process.env.NOTION_DATABASE_ID || '';
 
 /**
  * Pageの取得
+ * @param pageId PageまたはBlockのID
  */
 export const getPage = async (pageId: string) => {
   const response = await notion.pages.retrieve({ page_id: pageId });
@@ -84,6 +85,7 @@ export const createPage = async (params: any) => {
 
 /**
  * Pageの編集
+ * @param pageId PageまたはBlockのID
  */
 export const updatePage = async (pageId: string) => {
   const response = await notion.pages.update({
